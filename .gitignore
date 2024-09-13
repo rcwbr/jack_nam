@@ -1,0 +1,4 @@
+bazel-bin
+bazel-jack_name
+bazel-out
+bazel-testlogs

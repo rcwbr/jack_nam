@@ -1,0 +1,19 @@
+genrule(
+  name = "check_docker_image",
+  # srcs = [],
+  # outs = [],
+  cmd = "docker inspect $(hostname) --format '{{ .Image }}' | grep -q sha256:660201a15e8d66e09c35a6b53cbe51ae6d706bd55e31939e1d97cc1423753b73",
+)
+
+cc_library(
+  name = "jack_nam_hdr",
+  hdrs = ["include/jack_nam.h"],
+)
+
+cc_binary(
+  name = "jack_nam",
+  srcs = ["src/jack_nam.cpp"],
+  deps = [
+    ":jack_nam_hdr"
+  ]
+)
