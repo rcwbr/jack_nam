@@ -1,8 +1,7 @@
 {
   "name": "jack_nam",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "initializeCommand": "",
+  "image": "jack_nam_devcontainer",
   "mounts": [
     {
       "source": "jack_nam_vscode_extensions",
